@@ -30,7 +30,7 @@ certificatesRouter.get('/:id', async (request, response) => {
   const { id } = request.params;
 
   const repository = getRepository(Certificate);
-  const certificate = await repository.find({ where: { id } });
+  const certificate = await repository.findOne({ where: { id } });
 
   return response.json({ certificate });
 });

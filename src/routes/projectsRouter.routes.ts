@@ -13,6 +13,8 @@ projectsRouter.post('/', async (request, response) => {
     githubLink,
     link,
     certificate_id,
+    gifPath,
+    iconPath,
   } = request.body;
 
   const repository = getRepository(Project);
@@ -24,6 +26,8 @@ projectsRouter.post('/', async (request, response) => {
     githubLink,
     link,
     certificate_id,
+    gifPath,
+    iconPath,
   });
 
   await repository.save(project);
@@ -43,7 +47,7 @@ projectsRouter.get('/:id', async (request, response) => {
   const { id } = request.params;
   const repository = getRepository(Project);
 
-  const project = await repository.find({ where: { id } });
+  const project = await repository.findOne({ where: { id } });
 
   return response.json({ project });
 });

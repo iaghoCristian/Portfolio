@@ -30,6 +30,12 @@ class Project {
   mediaPath: string;
 
   @Column()
+  gifPath: string;
+
+  @Column()
+  iconPath: string;
+
+  @Column()
   link: string;
 
   @Column()
