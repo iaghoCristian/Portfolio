@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts",
+    "dev:server": "node dist/server.js",
     "migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "revert-migration": "ts-node ./node_modules/typeorm/cli.js migration:revert",
     "create-migration": "ts-node ./node_modules/typeorm/cli.js migration:create"
