@@ -7,7 +7,7 @@ const routes = Router();
 
 routes.use('/projects', projectsRouter);
 routes.use('/certificates', certificatesRouter);
-routes.use('/images', express.static(config.imagesDirectory));
+routes.use('//images', express.static(config.imagesDirectory));
 routes.use('/icons', express.static(config.iconsDirectory));
 routes.use('/videos', express.static(config.videosDirectory));
 routes.use('/gifs', express.static(config.gifsDirectory));
